@@ -24,6 +24,12 @@ const WorkTemplateDiv = styled.div`
   .workname {
     margin: 0.8rem 0;
   }
+  span {
+    display: inline-block;
+    background-color: black;
+    padding: 0 0.2rem;
+    height: 1.5rem;
+  }
 `;
 
 const WorkTemplateImgDiv = styled.div`
