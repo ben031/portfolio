@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const WorkTemplate = ({ pic, workname, site, framework }) => {
+const WorkTemplate = ({ pic, workname, site, framework, github, color }) => {
   return (
-    <WorkTemplateDiv>
+    <WorkTemplateDiv color={color}>
       <WorkTemplateImgDiv>
         <a href={site}>
           <img src={pic} alt="work" target="_blank" rel="noreferrer" />
@@ -11,24 +11,43 @@ const WorkTemplate = ({ pic, workname, site, framework }) => {
       </WorkTemplateImgDiv>
       <p className="workname">
         {workname} with{" "}
-        <span>
+        <span className="frameworkImg">
           <img src={framework} alt="framework" width="18px" />
         </span>
+        <br />
+        <a href={github} target="_blank" rel="noreferrer">
+          <button className="explain">코드설명</button>
+        </a>
       </p>
     </WorkTemplateDiv>
   );
 };
 
 export default WorkTemplate;
+
 const WorkTemplateDiv = styled.div`
   .workname {
     margin: 0.8rem 0;
   }
-  span {
+  .frameworkImg {
     display: inline-block;
     background-color: black;
     padding: 0 0.2rem;
     height: 1.5rem;
+  }
+  .explain {
+    padding: 0.2rem 0.6rem;
+    border: none;
+    background: none;
+    border: 1px black solid;
+    margin-top: 0.4rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .explain:hover {
+    background-color: black;
+    color: ${(props) => (props.color === "react" ? "#61dcfc" : "#f7df1c")};
   }
 `;
 

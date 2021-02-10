@@ -8,6 +8,8 @@ const work = [
     picture: coffee,
     href: "https://ben031.github.io/-coffee-delivery/",
     framework: react,
+    github: "https://github.com/ben031/-coffee-delivery/blob/master/README.md",
+    color: "react",
   },
 ];
 

@@ -14,6 +14,8 @@ const Work = () => {
             pic={item.picture}
             site={item.href}
             framework={item.framework}
+            github={item.github}
+            color={item.color}
           />
         ))}
       </WorkDiv>
