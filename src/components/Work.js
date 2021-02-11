@@ -40,7 +40,7 @@ const WorkSection = styled.section`
 const WorkDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 300px);
-  grid-gap: 20px;
+  grid-gap: 80px;
 
   @media only screen and (max-width: 1024px) {
     grid-template-columns: repeat(2, 300px);

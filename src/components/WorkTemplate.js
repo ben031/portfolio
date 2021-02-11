@@ -12,7 +12,7 @@ const WorkTemplate = ({ pic, workname, site, framework, github, color }) => {
       <p className="workname">
         {workname} with{" "}
         <span className="frameworkImg">
-          <img src={framework} alt="framework" width="18px" />
+          <img src={framework} alt="framework" width="19px" />
         </span>
         <br />
         <a href={github} target="_blank" rel="noreferrer">
@@ -31,9 +31,13 @@ const WorkTemplateDiv = styled.div`
   }
   .frameworkImg {
     display: inline-block;
-    background-color: black;
+    background-color: ${(props) =>
+      props.color === "react" ? "black" : "#f7df1c"};
     padding: 0 0.2rem;
     height: 1.5rem;
+    img {
+      padding-top: 2px;
+    }
   }
   .explain {
     padding: 0.2rem 0.6rem;
@@ -56,9 +60,8 @@ const WorkTemplateImgDiv = styled.div`
   overflow: hidden;
   border: 1px solid black;
   img {
-    object-fit: cover;
     width: 100%;
-    /* max-height: 100%; */
+    /* height: 110%; */
     transition: all 0.85s ease;
   }
 
